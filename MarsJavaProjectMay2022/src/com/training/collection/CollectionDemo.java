@@ -1,6 +1,10 @@
 package com.training.collection;
 
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class CollectionDemo {
@@ -13,12 +17,14 @@ public static void main(String args[])
 	Student s5=new Student("rajini",4,"D");
 	
 	
-	Set<Student> studentList=new HashSet<>();
+	//Set<Student> studentList=new HashSet<>();
+	List<Student> studentList=new ArrayList<>();
 	studentList.add(s1);
 	studentList.add(s2);
 	studentList.add(s3);
 	studentList.add(s4);
 	studentList.add(s5);
+	Collections.sort(studentList,new NameComparator());
 	
 	for(Student stud:studentList)
 	{
